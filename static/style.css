@@ -62,4 +62,13 @@ h2 {
 .button:hover {
     background: #a3685b;
 }
- 
+
+.arabic {
+    font-size: 3rem;
+    font-family: 'Scheherazade', serif;
+    color: #5a3e36;
+    margin-bottom: 1rem;
+    direction: rtl;
+    text-align: center;
+}
+
