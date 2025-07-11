@@ -4,18 +4,28 @@
     <meta charset="UTF-8">
     <title>Our Wedding Invite</title>
 
-    <!-- Arabic font -->
-    <link href="https://fonts.googleapis.com/css2?family=Scheherazade&display=swap" rel="stylesheet">
+    <!-- Google Fonts: Arabic + Verse Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Scheherazade&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
     <div class="container">
+        <!-- Islamic Intro -->
         <p class="arabic">بِسْمِ ٱللَّٰهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ</p>
+
+        <!-- Qur’an Verse -->
+        <div class="verse">
+            <p class="quote">“And We created you in pairs”</p>
+            <p class="surah">(Qur’an 78:8)</p>
+        </div>
+
+        <!-- Wedding Details -->
         <h1>You're Invited!</h1>
-        <h2>[Fida Mukadam] & [Huzaifa Baghdadi]</h2>
+        <h2>Fida Mukadam & Huzaifa Baghdadi</h2>
         <p class="date">Saturday, December 14, 2025</p>
+    </div>
 
         <!-- Placeholder for Video -->
         <div class="video-placeholder">
