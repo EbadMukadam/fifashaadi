@@ -47,23 +47,15 @@
       </div>
     </div>
 
-    <!-- Save the Date Button -->
+    <!-- Save the Date Dropdown -->
     <div class="save-date">
-      <div
-        title="Add to Calendar"
-        class="addeventatc stylish-calendar"
-        data-name="Fida & Huzaifa's Wedding"
-        data-description="Join us to celebrate the wedding of Fida & Huzaifa!"
-        data-start="2025-10-24 17:00:00"
-        data-end="2025-10-24 23:00:00"
-        data-timezone="Asia/Kolkata"
-        data-location="TBD, Mumbai, India"
-        data-organizer="Mrs. Shaista & Mr. Anwar Mukadam"
-        data-organizer-email="invite@example.com"
-        data-all-day="false"
-        data-title="Save the Date"
-      >
-        Save the Date
+      <div class="dropdown">
+        <button class="calendar-btn">📅 Save the Date</button>
+        <div class="dropdown-content">
+          <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Fida+%26+Huzaifa+Wedding&dates=20251024T113000Z/20251024T173000Z&details=Join+us+to+celebrate+our+special+day&location=Mumbai%2C+India" target="_blank">Google Calendar</a>
+          <a href="/static/fida-huzaifa-wedding.ics" download>Apple / iCal / Outlook</a>
+          <a href="https://calendar.yahoo.com/?v=60&view=d&type=20&title=Fida+%26+Huzaifa+Wedding&st=20251024T113000Z&dur=0600&desc=Join+us+for+the+wedding+celebration&in_loc=Mumbai%2C+India" target="_blank">Yahoo Calendar</a>
+        </div>
       </div>
     </div>
 
@@ -86,9 +78,6 @@
     </div>
 
   </div>
-
-  <!-- AddToCalendar Script -->
-  <script type="text/javascript" src="https://addevent.com/libs/atc/1.6.1/atc.min.js" async defer></script>
 
   <!-- Countdown Script -->
   <script>

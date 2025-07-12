@@ -1,0 +1,14 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Your Site//Wedding Invite//EN
+BEGIN:VEVENT
+UID:fida-huzaifa-wedding@example.com
+DTSTAMP:20250712T120000Z
+DTSTART:20251024T113000Z
+DTEND:20251024T173000Z
+SUMMARY:Fida & Huzaifa's Wedding
+LOCATION:Mumbai, India
+DESCRIPTION:Join us to celebrate the wedding of Fida & Huzaifa
+STATUS:CONFIRMED
+END:VEVENT
+END:VCALENDAR

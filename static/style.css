@@ -142,31 +142,66 @@ body {
   margin-top: 0.3rem;
 }
 
-/* Stylish Save the Date Button */
-.stylish-calendar {
-  background: linear-gradient(to right, #e0c3fc, #8ec5fc);
-  color: #fff !important;
-  font-weight: bold;
-  font-size: 1.1rem;
-  padding: 0.8rem 1.5rem;
-  border-radius: 50px;
-  cursor: pointer;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  text-decoration: none;
-  display: inline-block;
-  margin-top: 1rem;
-  transition: all 0.3s ease-in-out;
-}
-
-.stylish-calendar:hover {
-  transform: scale(1.05);
-  background: linear-gradient(to right, #d8b4fe, #7ed6fc);
-}
-
+/* Save the Date Dropdown Styling */
 .save-date {
   display: flex;
   justify-content: center;
+  margin-top: -1.5rem;
   margin-bottom: 2rem;
+}
+
+.calendar-btn {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.1rem;
+  padding: 0.75rem 1.5rem;
+  background: linear-gradient(to right, #eecda3, #ef629f);
+  border: none;
+  border-radius: 50px;
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
+}
+
+.calendar-btn:hover {
+  transform: scale(1.05);
+  background: linear-gradient(to right, #d5a3ee, #a362ef);
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 180px;
+  box-shadow: 0px 8px 16px rgba(0,0,0,0.1);
+  border-radius: 10px;
+  z-index: 1;
+  text-align: left;
+  padding: 0.5rem 0;
+  top: 110%;
+}
+
+.dropdown-content a {
+  color: #5a3e36;
+  padding: 10px 16px;
+  text-decoration: none;
+  display: block;
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 0.95rem;
+}
+
+.dropdown-content a:hover {
+  background-color: #f9f1eb;
+  color: #b77b57;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
 }
 
 /* Countdown Timer */
@@ -254,8 +289,8 @@ body {
     font-size: 1.4rem;
   }
 
-  .stylish-calendar {
+  .calendar-btn {
     font-size: 1rem;
-    padding: 0.7rem 1.2rem;
+    padding: 0.6rem 1.2rem;
   }
 }
