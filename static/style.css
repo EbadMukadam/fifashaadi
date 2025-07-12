@@ -1,74 +1,127 @@
-/* Base layout */
 body {
-    margin: 0;
-    font-family: 'Segoe UI', sans-serif;
-    background: #fef8f5;
-    color: #444;
-    text-align: center;
-    padding: 2rem;
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #fef8f5;
+  color: #444;
+  text-align: center;
+  padding: 2rem;
 }
 
 .container {
-    max-width: 600px;
-    margin: auto;
-    padding: 2rem;
-    background: white;
-    border-radius: 20px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  max-width: 600px;
+  margin: auto;
+  padding: 2rem;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
-/* Spiritual section */
+/* Spiritual Section */
 .spiritual {
-    text-align: center;
-    margin-top: 2rem;
-    margin-bottom: 3rem;
+  margin-top: 2rem;
+  margin-bottom: 3rem;
 }
 
-.spiritual .arabic {
-    font-size: 2rem;
-    font-family: 'Scheherazade', serif;
-    color: #5a3e36;
-    direction: rtl;
-    margin-bottom: 0.5rem;
+.arabic {
+  font-size: 2rem;
+  font-family: 'Scheherazade', serif;
+  color: #5a3e36;
+  direction: rtl;
+  margin-bottom: 0.5rem;
 }
 
-.spiritual .english-trans {
-    font-size: 1.1rem;
-    color: #444;
-    font-style: italic;
-    margin-bottom: 1rem;
+.english-trans {
+  font-size: 1.1rem;
+  color: #444;
+  font-style: italic;
+  margin-bottom: 1rem;
 }
 
-.spiritual .verse {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.3rem;
-    color: #5a3e36;
-    margin-bottom: 0.2rem;
-    text-align: center;
+.verse {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.3rem;
+  color: #5a3e36;
 }
 
 .surah {
-    font-size: 0.95rem;
-    color: #777;
+  font-size: 0.95rem;
+  color: #777;
 }
 
-/* Invitation block */
+/* Invitation Block */
 .invite-block {
-    text-align: center;
-    margin: 3rem 0;
-    color: #333;
+  text-align: center;
+  margin: 3rem 0;
+  color: #333;
 }
 
 .parents {
-    font-size: 1.2rem;
-    font-style: italic;
-    color: #444;
+  font-size: 1.2rem;
+  font-style: italic;
+  color: #444;
 }
 
 .request-line {
-    font-size: 1.1rem;
-    margin-top: 0.5rem;
-    letter-spacing: 0.5px;
+  font-size: 1.1rem;
+  margin-top: 0.5rem;
+  letter-spacing: 0.5px;
 }
 
-.highli
+.highlight-event {
+  font-family: 'Great Vibes', cursive;
+  font-size: 2.5rem;
+  color: #b77b57;
+  margin: 1rem 0;
+}
+
+.couple-line {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.bride,
+.groom {
+  font-family: 'Great Vibes', cursive;
+  font-size: 2.2rem;
+  color: #b77b57;
+  margin: 0.3rem 0;
+}
+
+.with {
+  font-size: 1.1rem;
+  font-style: italic;
+  color: #777;
+}
+
+/* Video Placeholder */
+.video-placeholder {
+  background: #eee;
+  border: 2px dashed #ccc;
+  padding: 4rem;
+  margin: 2rem 0;
+  font-size: 1.2rem;
+  border-radius: 10px;
+  text-align: center;
+}
+
+/* Buttons Section */
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.button {
+  background: #b97c6d;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 999px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.button:hover {
+  background: #a3685b;
+}
