@@ -1,7 +1,7 @@
 body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
-  background: #fef9f4; /* Light cream tone to match floral background */
+  background: #fef9f4;
   color: #444;
   text-align: center;
   padding: 2rem;
@@ -107,32 +107,32 @@ body {
   text-align: center;
 }
 
-/* Wedding Date with Custom Floral Frame */
-.wedding-date-framed {
-  background: url("../static/floral-frame-clean.png") no-repeat center center;
+/* Wedding Date with Floral Frame */
+.date-frame-container {
+  background: url("../static/floral-date-frame.png") no-repeat center center;
   background-size: contain;
   width: 100%;
   max-width: 400px;
   height: 300px;
+  margin: 3rem auto;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 3rem auto;
   text-align: center;
 }
 
-.date-content {
+.date-inside-frame {
+  background-color: rgba(255, 255, 255, 0.85);
   padding: 1rem;
-  background-color: rgba(255, 255, 255, 0.9);
-  border-radius: 12px;
-  max-width: 80%;
+  border-radius: 10px;
 }
 
 .gregorian-script {
   font-family: 'Great Vibes', cursive;
-  font-size: 1.8rem;
+  font-size: 1.9rem;
   color: #5a3e36;
   margin: 0;
+  white-space: nowrap;
 }
 
 .islamic-light {
@@ -142,11 +142,7 @@ body {
   margin-top: 0.3rem;
 }
 
-.nowrap {
-  white-space: nowrap;
-}
-
-/* Buttons Section */
+/* Buttons */
 .buttons {
   display: flex;
   flex-wrap: wrap;
@@ -166,19 +162,4 @@ body {
 
 .button:hover {
   background: #a3685b;
-}
-
-/* Mobile Friendly */
-@media (max-width: 500px) {
-  .gregorian-script {
-    font-size: 1.5rem;
-  }
-
-  .wedding-date-framed {
-    height: 260px;
-  }
-
-  .date-content {
-    max-width: 90%;
-  }
 }
