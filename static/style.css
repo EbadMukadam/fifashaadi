@@ -1,7 +1,7 @@
 body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
-  background: #fef8f5;
+  background: #fef9f4; /* Light cream tone to match floral background */
   color: #444;
   text-align: center;
   padding: 2rem;
@@ -109,26 +109,28 @@ body {
 
 /* Wedding Date with Custom Floral Frame */
 .wedding-date-framed {
-  background: url("../static/floral-frame.png") no-repeat center center;
+  background: url("../static/floral-frame-clean.png") no-repeat center center;
   background-size: contain;
+  width: 100%;
+  max-width: 400px;
   height: 300px;
   display: flex;
   align-items: center;
   justify-content: center;
   margin: 3rem auto;
   text-align: center;
-  max-width: 500px;
 }
 
 .date-content {
   padding: 1rem;
-  background-color: rgba(255, 255, 255, 0.85);
-  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 12px;
+  max-width: 80%;
 }
 
 .gregorian-script {
   font-family: 'Great Vibes', cursive;
-  font-size: 2rem;
+  font-size: 1.8rem;
   color: #5a3e36;
   margin: 0;
 }
@@ -140,7 +142,11 @@ body {
   margin-top: 0.3rem;
 }
 
-/* Action Buttons */
+.nowrap {
+  white-space: nowrap;
+}
+
+/* Buttons Section */
 .buttons {
   display: flex;
   flex-wrap: wrap;
@@ -160,4 +166,19 @@ body {
 
 .button:hover {
   background: #a3685b;
+}
+
+/* Mobile Friendly */
+@media (max-width: 500px) {
+  .gregorian-script {
+    font-size: 1.5rem;
+  }
+
+  .wedding-date-framed {
+    height: 260px;
+  }
+
+  .date-content {
+    max-width: 90%;
+  }
 }
