@@ -5,10 +5,10 @@
   <title>Our Wedding Invite</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Fonts -->
+  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Scheherazade&family=Great+Vibes&display=swap" rel="stylesheet">
 
-  <!-- Main Styles -->
+  <!-- Main Stylesheet -->
   <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
@@ -34,18 +34,20 @@
       </div>
     </div>
 
-    <!-- Placeholder for Wedding Video -->
+    <!-- Video Placeholder -->
     <div class="video-placeholder">
       <p>🎥 Wedding video coming soon</p>
     </div>
 
-    <!-- Wedding Date Section -->
-    <div class="wedding-date">
-      <p class="gregorian">📅 Friday, 24<sup>th</sup> October 2024</p>
-      <p class="islamic">(1st of Jumada al-Awwal 1447 AH)</p>
+    <!-- Wedding Date Section with Floral Frame -->
+    <div class="wedding-date-framed">
+      <div class="date-content">
+        <p class="gregorian-script">Friday, 24<sup>th</sup> October 2024</p>
+        <p class="islamic-light">(1st of Jumada al-Awwal 1447 AH)</p>
+      </div>
     </div>
 
-    <!-- Action Buttons -->
+    <!-- Buttons -->
     <div class="buttons">
       <a href="#rsvp" class="button">RSVP</a>
       <a href="#" class="button">Add to Calendar</a>

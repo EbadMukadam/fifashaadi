@@ -107,35 +107,40 @@ body {
   text-align: center;
 }
 
-/* Wedding Date */
-.wedding-date {
-  margin-top: 3rem;
-  margin-bottom: 2rem;
-  padding: 1.5rem;
-  border: 2px solid #d4c0b0;
-  border-radius: 12px;
-  background-color: #fcf8f4;
-  max-width: 400px;
-  margin-left: auto;
-  margin-right: auto;
-  box-shadow: 0 0 10px rgba(0,0,0,0.03);
+/* Wedding Date with Floral Frame */
+.wedding-date-framed {
+  background: url("https://i.imgur.com/sbOADKv.png") no-repeat center center;
+  background-size: contain;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 3rem auto;
+  text-align: center;
+  max-width: 500px;
 }
 
-.wedding-date .gregorian {
-  font-size: 1.4rem;
-  font-weight: bold;
+.date-content {
+  padding: 1rem;
+  background-color: rgba(255, 255, 255, 0.85);
+  border-radius: 10px;
+}
+
+.gregorian-script {
+  font-family: 'Great Vibes', cursive;
+  font-size: 2rem;
   color: #5a3e36;
-  font-family: 'Playfair Display', serif;
+  margin: 0;
 }
 
-.wedding-date .islamic {
-  font-size: 0.9rem;
-  color: #777;
+.islamic-light {
+  font-size: 0.95rem;
   font-style: italic;
-  margin-top: 0.2rem;
+  color: #777;
+  margin-top: 0.3rem;
 }
 
-/* Action Buttons */
+/* Buttons Section */
 .buttons {
   display: flex;
   flex-wrap: wrap;
