@@ -39,11 +39,22 @@
       <p>🎥 Wedding video coming soon</p>
     </div>
 
-    <!-- Wedding Date Section with Floral Frame -->
+    <!-- Wedding Date with Floral Frame -->
     <div class="date-frame-container">
       <div class="date-inside-frame">
         <p class="gregorian-script">Friday, 24<sup>th</sup> October 2024</p>
         <p class="islamic-light">(1st of Jumada al-Awwal 1447 AH)</p>
+      </div>
+    </div>
+
+    <!-- Countdown Message & Timer -->
+    <div class="countdown-section">
+      <p class="countdown-message">Can't wait for you to be part of this special day.<br>It's almost time!</p>
+      <div id="countdown">
+        <div><span id="days">00</span><small>Days</small></div>
+        <div><span id="hours">00</span><small>Hours</small></div>
+        <div><span id="minutes">00</span><small>Minutes</small></div>
+        <div><span id="seconds">00</span><small>Seconds</small></div>
       </div>
     </div>
 
@@ -56,5 +67,30 @@
     </div>
 
   </div>
+
+  <!-- Countdown Script -->
+  <script>
+    const countDownDate = new Date("Oct 24, 2025 17:00:00").getTime();
+
+    const countdownFunc = setInterval(function() {
+      const now = new Date().getTime();
+      const distance = countDownDate - now;
+
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      document.getElementById("days").innerText = days;
+      document.getElementById("hours").innerText = hours;
+      document.getElementById("minutes").innerText = minutes;
+      document.getElementById("seconds").innerText = seconds;
+
+      if (distance < 0) {
+        clearInterval(countdownFunc);
+        document.getElementById("countdown").innerHTML = "We're married!";
+      }
+    }, 1000);
+  </script>
 </body>
 </html>
