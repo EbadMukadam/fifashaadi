@@ -489,3 +489,31 @@ body {
   color: #333;
   margin-top: 1rem;
 }
+
+.diet-choice-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-bottom: 1.5rem;
+}
+
+.diet-choice {
+  text-align: center;
+  cursor: pointer;
+  border: 2px solid transparent;
+  border-radius: 12px;
+  padding: 10px;
+  transition: 0.3s ease;
+}
+
+.diet-choice img {
+  width: 80px;
+  height: auto;
+  margin-bottom: 0.5rem;
+}
+
+.diet-choice.selected {
+  border-color: #5c4634;
+  background-color: #f9f5f0;
+  box-shadow: 0 0 10px rgba(92, 70, 52, 0.3);
+}

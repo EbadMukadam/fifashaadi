@@ -9,6 +9,7 @@
 </head>
 <body>
   <div class="container">
+    <!-- Spiritual opening -->
     <div class="spiritual">
       <p class="arabic">بِسْمِ ٱللَّٰهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ</p>
       <p class="english-trans">In the name of Allah, the Most Gracious, the Most Merciful</p>
@@ -18,6 +19,7 @@
       </div>
     </div>
 
+    <!-- Invitation Block -->
     <div class="invite-block">
       <p class="parents">Mrs. Shaista & Mr. Anwar Mukadam</p>
       <p class="request-line">Request the honour of your presence at the</p>
@@ -30,8 +32,10 @@
       </div>
     </div>
 
+    <!-- Video placeholder -->
     <div class="video-placeholder">[ Wedding Video Coming Soon ]</div>
 
+    <!-- Date Block -->
     <div class="date-frame-container">
       <div class="date-inside-frame">
         <p class="gregorian-script">Friday, 24<sup>th</sup> October 2025</p>
@@ -39,6 +43,7 @@
       </div>
     </div>
 
+    <!-- Save the Date -->
     <div class="save-date">
       <div class="dropdown">
         <button class="calendar-btn">Save the Date</button>
@@ -49,6 +54,7 @@
       </div>
     </div>
 
+    <!-- Countdown -->
     <div class="countdown-section">
       <p class="countdown-message">Can't wait for you to be part of this special day. It's almost time!</p>
       <div id="countdown"></div>
@@ -80,18 +86,17 @@
         <input type="number" name="guests" id="guests" min="0" max="5" required>
 
         <label>Dietary Preference</label>
-        <div class="diet-options">
-          <label class="diet-item">
-            <input type="radio" name="diet" value="Vegetarian" required>
-            <div class="diet-icon veg"></div>
-            Vegetarian
-          </label>
-          <label class="diet-item">
-            <input type="radio" name="diet" value="Non-Vegetarian">
-            <div class="diet-icon nonveg"></div>
-            Non-Vegetarian
-          </label>
+        <div class="diet-choice-wrapper">
+          <div class="diet-choice" data-value="Vegetarian">
+            <img src="{{ url_for('static', filename='veg.png') }}" alt="Vegetarian">
+            <p>Vegetarian</p>
+          </div>
+          <div class="diet-choice" data-value="Non-Vegetarian">
+            <img src="{{ url_for('static', filename='non-veg.png') }}" alt="Non-Vegetarian">
+            <p>Non-Vegetarian</p>
+          </div>
         </div>
+        <input type="hidden" name="diet" id="diet-preference" required>
 
         <label for="message">Leave a note for the couple</label>
         <textarea name="message" id="message" rows="4" placeholder="Optional message..."></textarea>
@@ -136,7 +141,8 @@
     <!-- Share Photos Section -->
     <section class="photo-share-section">
       <h2 class="section-heading">
-        <img src="{{ url_for('static', filename='camera.png') }}" alt="Camera Icon" class="info-icon"> Share Your Wedding Moments
+        <img src="{{ url_for('static', filename='camera.png') }}" alt="Camera Icon" class="info-icon"><br>
+        Share Your Wedding Moments
       </h2>
       <p class="section-subtext">
         Help us relive the joy through your lens!<br>
@@ -156,13 +162,13 @@
       <img src="{{ url_for('static', filename='whatsapp.png') }}" alt="WhatsApp Icon" class="info-icon">
       <p class="contact-text">
         For assistance with accommodation and transport,<br>
-        please WhatsApp <strong>Ebad Mukadam</strong> at <a href="https://wa.me/917875531786" target="_blank">+91 78755 31786</a>
+        please WhatsApp <strong>Ebad Mukadam</strong> at <a class="whatsapp-link" href="https://wa.me/917875531786" target="_blank">+91 78755 31786</a>
       </p>
     </section>
-
   </div>
 
   <script>
+    // Countdown
     const countdown = document.getElementById('countdown');
     const targetDate = new Date('October 24, 2025 17:00:00').getTime();
 
@@ -188,6 +194,18 @@
         <div><span>${seconds}</span><small>Seconds</small></div>
       `;
     }, 1000);
+
+    // Dietary preference click handling
+    const choices = document.querySelectorAll('.diet-choice');
+    const hiddenInput = document.getElementById('diet-preference');
+
+    choices.forEach(choice => {
+      choice.addEventListener('click', () => {
+        choices.forEach(c => c.classList.remove('selected'));
+        choice.classList.add('selected');
+        hiddenInput.value = choice.dataset.value;
+      });
+    });
   </script>
 </body>
 </html>
