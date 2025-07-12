@@ -1,342 +1,519 @@
 body {
   margin: 0;
-  font-family: 'Playfair Display', serif;
-  background-color: #fff;
-  color: #3a3a3a;
+  font-family: 'Segoe UI', sans-serif;
+  background: #fef9f4;
+  color: #444;
+  text-align: center;
+  padding: 2rem;
 }
 
 .container {
-  padding: 30px 20px;
-  max-width: 800px;
-  margin: 0 auto;
-  text-align: center;
+  max-width: 650px;
+  margin: auto;
+  padding: 2rem;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Spiritual Section */
+.spiritual {
+  margin-top: 2rem;
+  margin-bottom: 3rem;
 }
 
 .arabic {
+  font-size: 2rem;
   font-family: 'Scheherazade', serif;
-  font-size: 30px;
-  margin-bottom: 10px;
+  color: #5a3e36;
+  direction: rtl;
+  margin-bottom: 0.5rem;
 }
 
 .english-trans {
-  font-size: 16px;
+  font-size: 1.1rem;
+  color: #444;
   font-style: italic;
-  color: #555;
-  margin-bottom: 20px;
+  margin-bottom: 1rem;
 }
 
 .verse {
-  font-style: italic;
-  font-size: 18px;
-  margin-bottom: 30px;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.3rem;
+  color: #5a3e36;
 }
 
 .surah {
-  font-size: 14px;
+  font-size: 0.95rem;
   color: #777;
 }
 
+/* Invitation Block */
 .invite-block {
-  margin-top: 30px;
-}
-
-.parents,
-.request-line,
-.couple-line {
-  margin: 5px 0;
-  font-size: 18px;
-}
-
-.highlight-event {
-  font-size: 22px;
-  font-weight: bold;
-  margin: 10px 0;
-}
-
-.spaced-names {
-  margin-top: 10px;
-}
-
-.bride, .groom {
-  font-family: 'Great Vibes', cursive;
-  font-size: 28px;
-  margin: 5px 0;
-}
-
-.with {
-  font-size: 18px;
-  font-style: italic;
-  margin: 0;
-}
-
-.video-placeholder {
-  margin: 30px 0;
-  padding: 40px;
-  background-color: #f4f4f4;
-  font-style: italic;
-  color: #888;
-}
-
-.date-frame-container {
-  background: url("{{ url_for('static', filename='floral-frame.png') }}") no-repeat center;
-  background-size: contain;
-  padding: 40px 20px;
-  margin: 40px 0;
-}
-
-.date-inside-frame {
-  font-size: 20px;
+  text-align: center;
+  margin: 3rem 0;
   color: #333;
 }
 
+.parents {
+  font-size: 1.2rem;
+  font-style: italic;
+  color: #444;
+}
+
+.request-line {
+  font-size: 1.1rem;
+  margin-top: 0.5rem;
+  letter-spacing: 0.5px;
+}
+
+.highlight-event {
+  font-family: 'Great Vibes', cursive;
+  font-size: 2.5rem;
+  color: #b77b57;
+  margin: 1rem 0;
+}
+
+.couple-line {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.spaced-names p {
+  margin: 0.5rem 0;
+}
+
+.bride,
+.groom {
+  font-family: 'Great Vibes', cursive;
+  font-size: 2.2rem;
+  color: #b77b57;
+}
+
+.with {
+  font-size: 1.1rem;
+  font-style: italic;
+  color: #777;
+}
+
+/* Video Placeholder */
+.video-placeholder {
+  background: #eee;
+  border: 2px dashed #ccc;
+  padding: 4rem;
+  margin: 2rem 0;
+  font-size: 1.2rem;
+  border-radius: 10px;
+  text-align: center;
+}
+
+/* Floral Date Frame */
+.date-frame-container {
+  background: url("../static/floral-date-frame.png") no-repeat center center;
+  background-size: contain;
+  width: 100%;
+  max-width: 450px;
+  height: 340px;
+  margin: 3rem auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.date-inside-frame {
+  background-color: rgba(255, 255, 255, 0.85);
+  padding: 1rem;
+  border-radius: 10px;
+}
+
 .gregorian-script {
-  font-size: 22px;
-  font-weight: bold;
+  font-family: 'Great Vibes', cursive;
+  font-size: 2.3rem;
+  color: #5a3e36;
+  margin: 0;
+  white-space: nowrap;
 }
 
 .islamic-light {
-  font-size: 14px;
+  font-size: 0.95rem;
+  font-style: italic;
   color: #777;
-  margin-top: 5px;
+  margin-top: 0.3rem;
 }
 
+/* Save the Date */
 .save-date {
-  margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+  margin: -1rem 0 2rem 0;
 }
 
 .calendar-btn {
-  padding: 12px 25px;
-  background-color: #8e5c4b;
-  color: #fff;
-  border: none;
-  font-size: 16px;
-  border-radius: 25px;
-  cursor: pointer;
   font-family: 'Playfair Display', serif;
-  transition: background 0.3s;
+  font-size: 1.1rem;
+  padding: 0.75rem 1.5rem;
+  background: linear-gradient(to right, #eecda3, #ef629f);
+  border: none;
+  border-radius: 50px;
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  transition: all 0.3s ease;
 }
 
 .calendar-btn:hover {
-  background-color: #a76c5f;
+  transform: scale(1.05);
+  background: linear-gradient(to right, #d5a3ee, #a362ef);
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
 }
 
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: #fff;
-  box-shadow: 0 0 10px rgba(0,0,0,0.15);
-  border-radius: 6px;
-  padding: 10px;
-  z-index: 10;
+  background-color: white;
+  min-width: 180px;
+  box-shadow: 0px 8px 16px rgba(0,0,0,0.1);
+  border-radius: 10px;
+  z-index: 1;
+  text-align: left;
+  padding: 0.5rem 0;
+  top: 110%;
+}
+
+.dropdown-content a {
+  color: #5a3e36;
+  padding: 10px 16px;
+  text-decoration: none;
+  display: block;
+  font-family: 'Segoe UI', sans-serif;
+  font-size: 0.95rem;
+}
+
+.dropdown-content a:hover {
+  background-color: #f9f1eb;
+  color: #b77b57;
 }
 
 .dropdown:hover .dropdown-content {
   display: block;
 }
 
-.dropdown-content a {
-  display: block;
-  padding: 5px 10px;
-  text-decoration: none;
-  color: #333;
-  transition: background 0.2s;
-}
-
-.dropdown-content a:hover {
-  background-color: #f0f0f0;
-}
-
+/* Countdown Timer */
 .countdown-section {
-  margin: 40px 0;
+  margin-top: 2rem;
+  text-align: center;
 }
 
 .countdown-message {
-  font-size: 18px;
-  margin-bottom: 15px;
+  font-size: 1.2rem;
+  font-style: italic;
+  margin-bottom: 1rem;
+  color: #5a3e36;
 }
 
 #countdown {
   display: flex;
   justify-content: center;
-  gap: 15px;
-  font-size: 18px;
+  gap: 1.5rem;
+  font-family: 'Playfair Display', serif;
+  flex-wrap: wrap;
 }
 
 #countdown div {
   text-align: center;
+  background: #fceee9;
+  padding: 1rem;
+  border-radius: 10px;
+  min-width: 70px;
 }
 
 #countdown span {
   display: block;
-  font-size: 24px;
-  font-weight: bold;
+  font-size: 1.8rem;
+  color: #b77b57;
 }
 
-.guest-info-section,
-.photo-share-section,
-.contact-assist {
-  margin: 40px 0;
+#countdown small {
+  font-size: 0.8rem;
+  color: #555;
 }
 
-.section-heading {
-  font-size: 24px;
-  font-weight: bold;
-  margin-bottom: 20px;
-}
-
-.info-block {
-  margin-bottom: 30px;
-  text-align: left;
-  display: flex;
-  align-items: center;
-  gap: 15px;
-}
-
-.info-icon {
-  width: 40px;
-  height: 40px;
-  flex-shrink: 0;
-}
-
-.info-title {
-  font-size: 20px;
-  font-weight: bold;
-  margin: 0;
-}
-
-.info-detail {
-  font-size: 16px;
-  margin-top: 5px;
-}
-
-.upload-btn {
-  display: inline-block;
-  margin-top: 10px;
-  padding: 10px 20px;
-  background-color: #6b4c3b;
-  color: white;
-  text-decoration: none;
-  border-radius: 20px;
-  font-size: 16px;
-  transition: background 0.3s;
-}
-
-.upload-btn:hover {
-  background-color: #8e5c4b;
-}
-
-.centered-camera {
-  width: 60px;
-  margin: 0 auto 10px auto;
-  display: block;
-}
-
-.contact-assist {
-  background-color: #f9f9f9;
-  padding: 20px;
-  border-radius: 8px;
-}
-
-.contact-text {
-  font-size: 16px;
-  margin-top: 10px;
-  color: #333;
-}
-
-.whatsapp-link {
-  color: #6b4c3b;
-  text-decoration: none;
-  font-weight: bold;
-}
-
+/* RSVP Section */
 .rsvp-section {
-  margin-top: 40px;
+  margin-top: 4rem;
+  padding: 2rem;
+  background: #fff9f6;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
 }
 
 .rsvp-heading {
-  font-size: 24px;
-  margin-bottom: 10px;
+  font-size: 2rem;
+  font-family: 'Playfair Display', serif;
+  color: #b77b57;
+  margin-bottom: 0.5rem;
 }
 
 .rsvp-subtext {
-  font-size: 16px;
-  margin-bottom: 20px;
+  font-size: 1rem;
+  margin-bottom: 2rem;
+  color: #555;
 }
 
 .rsvp-form {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 1rem;
+  max-width: 500px;
+  margin: 0 auto;
   text-align: left;
-}
-
-.rsvp-form label {
-  font-weight: bold;
 }
 
 .rsvp-form input,
 .rsvp-form select,
 .rsvp-form textarea {
-  padding: 10px;
+  padding: 0.75rem;
   border: 1px solid #ccc;
-  border-radius: 6px;
-  font-size: 15px;
-  font-family: inherit;
+  border-radius: 8px;
+  font-size: 1rem;
+  width: 100%;
 }
 
+.rsvp-form label {
+  font-weight: bold;
+  font-size: 0.95rem;
+  color: #333;
+}
+
+/* Dietary with sprite */
 .diet-options {
   display: flex;
-  gap: 20px;
+  gap: 2rem;
+  margin-top: 0.5rem;
   align-items: center;
 }
 
 .diet-item {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 8px;
+  font-size: 0.95rem;
+  color: #333;
 }
 
 .diet-icon {
-  width: 30px;
-  height: 30px;
-  background-size: cover;
+  width: 48px;
+  height: 48px;
+  background-image: url('../static/rsvp-icons.png');
+  background-repeat: no-repeat;
+  background-size: 150px auto;
+  margin-bottom: 5px;
+  opacity: 0.75;
 }
 
-.veg {
-  background-image: url("{{ url_for('static', filename='veg.png') }}");
+.diet-icon.veg {
+  background-position: 0 0;
 }
 
-.nonveg {
-  background-image: url("{{ url_for('static', filename='non-veg.png') }}");
+.diet-icon.nonveg {
+  background-position: -55px 0;
+}
+
+.diet-item:hover .diet-icon {
+  opacity: 1;
+  transform: scale(1.05);
 }
 
 .submit-btn {
-  padding: 12px;
-  background-color: #6b4c3b;
+  background: #b77b57;
   color: white;
+  padding: 0.75rem;
   border: none;
-  border-radius: 25px;
-  font-size: 16px;
+  border-radius: 999px;
+  font-size: 1rem;
   cursor: pointer;
+  transition: background 0.3s ease;
 }
 
 .submit-btn:hover {
-  background-color: #8e5c4b;
+  background: #a3685b;
 }
 
 /* Responsive */
-@media (max-width: 600px) {
-  .info-block {
-    flex-direction: column;
-    align-items: flex-start;
+@media (max-width: 500px) {
+  .gregorian-script {
+    font-size: 2rem;
   }
 
-  .info-icon {
-    margin-bottom: 10px;
+  .date-frame-container {
+    height: 300px;
   }
 
-  #countdown {
-    flex-direction: column;
-    gap: 10px;
+  #countdown div {
+    min-width: 60px;
+    padding: 0.75rem;
   }
+
+  .diet-options {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+.diet-options {
+  display: flex;
+  gap: 2rem;
+  margin-top: 0.5rem;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.diet-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 0.95rem;
+  color: #333;
+  text-align: center;
+}
+
+.diet-img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  margin-bottom: 6px;
+  opacity: 0.85;
+}
+
+.diet-item:hover .diet-img {
+  transform: scale(1.05);
+  opacity: 1;
+}
+
+.rsvp-icon-top {
+  width: 50px;
+  margin: 0 auto 15px;
+  display: block;
+  opacity: 0.85;
+}
+
+/* Guest Info & Upload Styles */
+.guest-info-section, .photo-share-section, .contact-assist {
+  background-color: #fdf9f3;
+  text-align: center;
+  padding: 3rem 1.5rem;
+  margin-top: 2rem;
+  border-top: 1px dashed #e0cfc2;
+}
+
+.section-heading {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.8rem;
+  color: #333;
+  margin-bottom: 1.5rem;
+}
+
+.info-block {
+  margin: 2rem 0;
+}
+
+.info-icon {
+  width: 40px;
+  height: auto;
+  opacity: 0.85;
+  margin-bottom: 0.5rem;
+}
+
+.info-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #5c4634;
+  margin-bottom: 0.5rem;
+}
+
+.info-detail {
+  font-size: 1rem;
+  color: #555;
+}
+
+.info-detail a {
+  color: #b08c62;
+  text-decoration: none;
+}
+
+.info-detail a:hover {
+  text-decoration: underline;
+}
+
+.upload-btn {
+  background-color: #c6a77d;
+  color: #fff;
+  text-decoration: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: background 0.3s ease;
+  display: inline-block;
+  margin-top: 1rem;
+}
+
+.upload-btn:hover {
+  background-color: #b08c62;
+}
+
+.qr-block {
+  margin-top: 1.5rem;
+}
+
+.qr-label {
+  font-size: 0.9rem;
+  color: #444;
+  margin-bottom: 0.5rem;
+}
+
+.qr-img {
+  width: 120px;
+  height: auto;
+  opacity: 0.9;
+}
+
+/* Contact section */
+.contact-assist .contact-text {
+  font-size: 1rem;
+  color: #333;
+  margin-top: 1rem;
+}
+
+.diet-choice-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-bottom: 1.5rem;
+}
+
+.diet-choice {
+  text-align: center;
+  cursor: pointer;
+  border: 2px solid transparent;
+  border-radius: 12px;
+  padding: 10px;
+  transition: 0.3s ease;
+}
+
+.diet-choice img {
+  width: 80px;
+  height: auto;
+  margin-bottom: 0.5rem;
+}
+
+.diet-choice.selected {
+  border-color: #5c4634;
+  background-color: #f9f5f0;
+  box-shadow: 0 0 10px rgba(92, 70, 52, 0.3);
 }
