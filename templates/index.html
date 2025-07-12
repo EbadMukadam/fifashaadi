@@ -33,10 +33,8 @@
       </div>
     </div>
 
-    <!-- Video placeholder -->
     <div class="video-placeholder">[ Wedding Video Coming Soon ]</div>
 
-    <!-- Date Block -->
     <div class="date-frame-container">
       <div class="date-inside-frame">
         <p class="gregorian-script">Friday, 24<sup>th</sup> October 2025</p>
@@ -44,7 +42,6 @@
       </div>
     </div>
 
-    <!-- Save the Date -->
     <div class="save-date">
       <div class="dropdown">
         <button class="calendar-btn">Save the Date</button>
@@ -55,7 +52,6 @@
       </div>
     </div>
 
-    <!-- Countdown -->
     <div class="countdown-section">
       <p class="countdown-message">Can't wait for you to be part of this special day. It's almost time!</p>
       <div id="countdown"></div>
@@ -68,7 +64,8 @@
       <div class="info-block">
         <img src="{{ url_for('static', filename='attire.png') }}" alt="Attire Icon" class="info-icon">
         <h3 class="info-title">Attire Theme</h3>
-        <p class="info-detail">Dress Code: Elegant Traditional Attire<br>
+        <p class="info-detail">
+          Dress Code: Elegant Traditional Attire<br/>
           We’d love to see you in festive cultural outfits.
         </p>
       </div>
@@ -77,8 +74,8 @@
         <img src="{{ url_for('static', filename='mosque.png') }}" alt="Mosque Icon" class="info-icon">
         <h3 class="info-title">Nikah Ceremony</h3>
         <p class="info-detail">
-          <strong>Venue:</strong> The Jama Masjid Nerul (Nerul Aalami Markaz)<br>
-          <strong>Time:</strong> After Salat Al-Asar ≈ 5:00 PM<br>
+          <strong>Venue:</strong> The Jama Masjid Nerul (Nerul Aalami Markaz)<br/>
+          <strong>Time:</strong> After Salat Al-Asar ≈ 5:00 PM<br/>
           <a href="https://www.google.com/maps?q=22MC%2BW6G,+Jama+Masjid+Rd,+Navi+Mumbai,+India" target="_blank">📍 View on Google Maps</a>
         </p>
       </div>
@@ -87,8 +84,8 @@
         <img src="{{ url_for('static', filename='hall.png') }}" alt="Reception Icon" class="info-icon">
         <h3 class="info-title">Reception Venue</h3>
         <p class="info-detail">
-          <strong>Venue:</strong> Centurion Banquet Hall (3rd Floor, Hawares Centurion Mall)<br>
-          <strong>Time:</strong> 7:00 PM onwards<br>
+          <strong>Venue:</strong> Centurion Banquet Hall (3rd Floor, Hawares Centurion Mall)<br/>
+          <strong>Time:</strong> 7:00 PM onwards<br/>
           <a href="https://www.google.com/maps?q=Centurion+Banquet+Hall,+Navi+Mumbai,+India" target="_blank">📍 View on Google Maps</a>
         </p>
       </div>
@@ -191,6 +188,7 @@
       `;
     }, 1000);
 
+    // RSVP dietary selection
     const choices = document.querySelectorAll('.diet-choice');
     const hiddenInput = document.getElementById('diet-preference');
 
