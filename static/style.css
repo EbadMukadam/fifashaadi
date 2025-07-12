@@ -402,3 +402,90 @@ body {
   display: block;
   opacity: 0.85;
 }
+
+/* Guest Info & Upload Styles */
+.guest-info-section, .photo-share-section, .contact-assist {
+  background-color: #fdf9f3;
+  text-align: center;
+  padding: 3rem 1.5rem;
+  margin-top: 2rem;
+  border-top: 1px dashed #e0cfc2;
+}
+
+.section-heading {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.8rem;
+  color: #333;
+  margin-bottom: 1.5rem;
+}
+
+.info-block {
+  margin: 2rem 0;
+}
+
+.info-icon {
+  width: 40px;
+  height: auto;
+  opacity: 0.85;
+  margin-bottom: 0.5rem;
+}
+
+.info-title {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #5c4634;
+  margin-bottom: 0.5rem;
+}
+
+.info-detail {
+  font-size: 1rem;
+  color: #555;
+}
+
+.info-detail a {
+  color: #b08c62;
+  text-decoration: none;
+}
+
+.info-detail a:hover {
+  text-decoration: underline;
+}
+
+.upload-btn {
+  background-color: #c6a77d;
+  color: #fff;
+  text-decoration: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: background 0.3s ease;
+  display: inline-block;
+  margin-top: 1rem;
+}
+
+.upload-btn:hover {
+  background-color: #b08c62;
+}
+
+.qr-block {
+  margin-top: 1.5rem;
+}
+
+.qr-label {
+  font-size: 0.9rem;
+  color: #444;
+  margin-bottom: 0.5rem;
+}
+
+.qr-img {
+  width: 120px;
+  height: auto;
+  opacity: 0.9;
+}
+
+/* Contact section */
+.contact-assist .contact-text {
+  font-size: 1rem;
+  color: #333;
+  margin-top: 1rem;
+}
