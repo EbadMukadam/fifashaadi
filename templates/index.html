@@ -9,10 +9,11 @@
 </head>
 <body>
   <div class="container">
+
     <!-- Spiritual opening -->
     <div class="spiritual">
       <p class="arabic">بِسْمِ ٱللَّٰهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ</p>
-      <p class="english-trans">In the name of Allah, the Most Gracious, the Most Merciful</p>
+      <p class="english-trans">In the name of Allah, the Most Beneficent, the Most Merciful</p>
       <div class="verse">
         “And We created you in pairs”
         <div class="surah">(Qur’an 78:8)</div>
@@ -60,6 +61,63 @@
       <div id="countdown"></div>
     </div>
 
+    <!-- Guest Info Section -->
+    <section class="guest-info-section">
+      <h2 class="section-heading">🌿 Important Info for Our Guests</h2>
+
+      <div class="info-block">
+        <img src="{{ url_for('static', filename='attire.png') }}" alt="Attire Icon" class="info-icon">
+        <h3 class="info-title">Attire Theme</h3>
+        <p class="info-detail">Dress Code: Elegant Traditional Attire<br>
+          We’d love to see you in festive cultural outfits.
+        </p>
+      </div>
+
+      <div class="info-block">
+        <img src="{{ url_for('static', filename='mosque.png') }}" alt="Mosque Icon" class="info-icon">
+        <h3 class="info-title">Nikah Ceremony</h3>
+        <p class="info-detail">
+          <strong>Venue:</strong> The Jama Masjid Nerul (Nerul Aalami Markaz)<br>
+          <strong>Time:</strong> After Salat Al-Asar ≈ 5:00 PM<br>
+          <a href="https://www.google.com/maps?q=22MC%2BW6G,+Jama+Masjid+Rd,+Navi+Mumbai,+India" target="_blank">📍 View on Google Maps</a>
+        </p>
+      </div>
+
+      <div class="info-block">
+        <img src="{{ url_for('static', filename='hall.png') }}" alt="Reception Icon" class="info-icon">
+        <h3 class="info-title">Reception Venue</h3>
+        <p class="info-detail">
+          <strong>Venue:</strong> Centurion Banquet Hall (3rd Floor, Hawares Centurion Mall)<br>
+          <strong>Time:</strong> 7:00 PM onwards<br>
+          <a href="https://www.google.com/maps?q=Centurion+Banquet+Hall,+Navi+Mumbai,+India" target="_blank">📍 View on Google Maps</a>
+        </p>
+      </div>
+    </section>
+
+    <!-- Photo Upload Section -->
+    <section class="photo-share-section">
+      <h2 class="section-heading">
+        <img src="{{ url_for('static', filename='camera.png') }}" alt="Camera Icon" class="info-icon"><br>
+        Share Your Wedding Moments
+      </h2>
+      <p class="section-subtext">
+        Help us relive the joy through your lens!<br>
+        We'd love to see the moments you captured during the celebration.
+      </p>
+      <a href="https://photos.app.goo.gl/7ZRMurBh6VeZt1Yy7" class="upload-btn" target="_blank">
+        📤 Upload Your Photos
+      </a>
+    </section>
+
+    <!-- Contact Assistance -->
+    <section class="contact-assist">
+      <img src="{{ url_for('static', filename='whatsapp.png') }}" alt="WhatsApp Icon" class="info-icon">
+      <p class="contact-text">
+        For assistance with accommodation and transport,<br>
+        please WhatsApp <strong>Ebad Mukadam</strong> at <a class="whatsapp-link" href="https://wa.me/917875531786" target="_blank">+91 78755 31786</a>
+      </p>
+    </section>
+
     <!-- RSVP Section -->
     <section class="rsvp-section" id="rsvp">
       <h2 class="rsvp-heading">RSVP</h2>
@@ -104,71 +162,9 @@
         <button type="submit" class="submit-btn">Submit RSVP</button>
       </form>
     </section>
-
-    <!-- Guest Info Section -->
-    <section class="guest-info-section">
-      <h2 class="section-heading">🌿 Important Info for Our Guests</h2>
-
-      <div class="info-block">
-        <img src="{{ url_for('static', filename='attire.png') }}" alt="Attire Icon" class="info-icon">
-        <h3 class="info-title">Attire Theme</h3>
-        <p class="info-detail">Dress Code: Elegant Traditional Attire<br>
-          We’d love to see you in festive cultural outfits.
-        </p>
-      </div>
-
-      <div class="info-block">
-        <img src="{{ url_for('static', filename='mosque.png') }}" alt="Mosque Icon" class="info-icon">
-        <h3 class="info-title">Nikah Ceremony</h3>
-        <p class="info-detail">
-          <strong>Venue:</strong> The Jama Masjid Nerul (Nerul Aalami Markaz)<br>
-          <strong>Time:</strong> After Salat Al-Asar ≈ 5:00 PM<br>
-          <a href="https://www.google.com/maps?q=22MC%2BW6G,+Jama+Masjid+Rd,+Navi+Mumbai,+India" target="_blank">📍 View on Google Maps</a>
-        </p>
-      </div>
-
-      <div class="info-block">
-        <img src="{{ url_for('static', filename='hall.png') }}" alt="Reception Icon" class="info-icon">
-        <h3 class="info-title">Reception Venue</h3>
-        <p class="info-detail">
-          <strong>Venue:</strong> Centurion Banquet Hall (3rd Floor, Hawares Centurion Mall)<br>
-          <strong>Time:</strong> 7:00 PM onwards<br>
-          <a href="https://www.google.com/maps?q=Centurion+Banquet+Hall,+Navi+Mumbai,+India" target="_blank">📍 View on Google Maps</a>
-        </p>
-      </div>
-    </section>
-
-    <!-- Share Photos Section -->
-    <section class="photo-share-section">
-      <h2 class="section-heading">
-        <img src="{{ url_for('static', filename='camera.png') }}" alt="Camera Icon" class="info-icon"><br>
-        Share Your Wedding Moments
-      </h2>
-      <p class="section-subtext">
-        Help us relive the joy through your lens!<br>
-        We'd love to see the moments you captured during the celebration.
-      </p>
-      <a href="https://photos.app.goo.gl/7ZRMurBh6VeZt1Yy7" class="upload-btn" target="_blank">
-        📤 Upload Your Photos
-      </a>
-      <div class="qr-block">
-        <p class="qr-label">Or scan this QR code:</p>
-        <img src="{{ url_for('static', filename='wedding_photos_qr.png') }}" alt="QR Code to Upload Photos" class="qr-img">
-      </div>
-    </section>
-
-    <!-- Contact Assistance Section -->
-    <section class="contact-assist">
-      <img src="{{ url_for('static', filename='whatsapp.png') }}" alt="WhatsApp Icon" class="info-icon">
-      <p class="contact-text">
-        For assistance with accommodation and transport,<br>
-        please WhatsApp <strong>Ebad Mukadam</strong> at <a class="whatsapp-link" href="https://wa.me/917875531786" target="_blank">+91 78755 31786</a>
-      </p>
-    </section>
   </div>
 
   <script>
-    // Countdown
     const countdown = document.getElementById('countdown');
     const targetDate = new Date('October 24, 2025 17:00:00').getTime();
 
@@ -195,7 +191,6 @@
       `;
     }, 1000);
 
-    // Dietary preference click handling
     const choices = document.querySelectorAll('.diet-choice');
     const hiddenInput = document.getElementById('diet-preference');
 
