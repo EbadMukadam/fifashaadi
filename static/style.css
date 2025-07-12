@@ -517,3 +517,27 @@ body {
   background-color: #f9f5f0;
   box-shadow: 0 0 10px rgba(92, 70, 52, 0.3);
 }
+
+/* Adjusted for mobile - smaller camera icon */
+@media (max-width: 500px) {
+  .info-icon-centered {
+    width: 60px;
+  }
+}
+
+/* Centered camera icon - adjusted */
+.info-icon-centered {
+  width: 80px;
+  height: auto;
+  margin: 0 auto 1rem auto;
+  display: block;
+  opacity: 0.9;
+}
+
+/* Slightly bigger icons for info */
+.info-icon {
+  width: 50px;
+  height: auto;
+  opacity: 0.85;
+  margin-bottom: 0.3rem;
+}
