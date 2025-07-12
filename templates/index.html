@@ -59,13 +59,14 @@
 
     <!-- RSVP Section -->
     <section class="rsvp-section" id="rsvp">
+      <img src="{{ url_for('static', filename='rsvp.png') }}" alt="RSVP icon" class="rsvp-icon-top">
       <h2 class="rsvp-heading">RSVP</h2>
       <p class="rsvp-subtext">
         Please let us know if you'll be able to make it.<br>
         Kindly RSVP by <strong>1st October</strong>.
       </p>
 
-      <form class="rsvp-form" action="https://formspree.io/f/yourFormID" method="POST">
+      <form class="rsvp-form" action="https://formspree.io/f/mblynbeq" method="POST">
         <label>Will you attend?</label>
         <select name="attendance" required>
           <option value="">Select an option</option>
@@ -86,12 +87,12 @@
         <div class="diet-options">
           <label class="diet-item">
             <input type="radio" name="diet" value="Vegetarian" required>
-            <div class="diet-icon veg"></div>
+            <img src="{{ url_for('static', filename='veg.png') }}" alt="Vegetarian" class="diet-img">
             Vegetarian
           </label>
           <label class="diet-item">
             <input type="radio" name="diet" value="Non-Vegetarian">
-            <div class="diet-icon nonveg"></div>
+            <img src="{{ url_for('static', filename='non-veg.png') }}" alt="Non-Vegetarian" class="diet-img">
             Non-Vegetarian
           </label>
         </div>
