@@ -107,9 +107,9 @@ body {
   text-align: center;
 }
 
-/* Wedding Date with Floral Frame */
+/* Wedding Date with Custom Floral Frame */
 .wedding-date-framed {
-  background: url("https://i.imgur.com/sbOADKv.png") no-repeat center center;
+  background: url("../static/floral-frame.png") no-repeat center center;
   background-size: contain;
   height: 300px;
   display: flex;
@@ -140,7 +140,7 @@ body {
   margin-top: 0.3rem;
 }
 
-/* Buttons Section */
+/* Action Buttons */
 .buttons {
   display: flex;
   flex-wrap: wrap;
