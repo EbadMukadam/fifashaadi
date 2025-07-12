@@ -243,8 +243,168 @@ body {
   color: #555;
 }
 
-/* Guest Info Section */
-.guest-info-section {
+/* RSVP Section */
+.rsvp-section {
+  margin-top: 4rem;
+  padding: 2rem;
+  background: #fff9f6;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+.rsvp-heading {
+  font-size: 2rem;
+  font-family: 'Playfair Display', serif;
+  color: #b77b57;
+  margin-bottom: 0.5rem;
+}
+
+.rsvp-subtext {
+  font-size: 1rem;
+  margin-bottom: 2rem;
+  color: #555;
+}
+
+.rsvp-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 500px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.rsvp-form input,
+.rsvp-form select,
+.rsvp-form textarea {
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  width: 100%;
+}
+
+.rsvp-form label {
+  font-weight: bold;
+  font-size: 0.95rem;
+  color: #333;
+}
+
+/* Dietary with sprite */
+.diet-options {
+  display: flex;
+  gap: 2rem;
+  margin-top: 0.5rem;
+  align-items: center;
+}
+
+.diet-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 0.95rem;
+  color: #333;
+}
+
+.diet-icon {
+  width: 48px;
+  height: 48px;
+  background-image: url('../static/rsvp-icons.png');
+  background-repeat: no-repeat;
+  background-size: 150px auto;
+  margin-bottom: 5px;
+  opacity: 0.75;
+}
+
+.diet-icon.veg {
+  background-position: 0 0;
+}
+
+.diet-icon.nonveg {
+  background-position: -55px 0;
+}
+
+.diet-item:hover .diet-icon {
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+.submit-btn {
+  background: #b77b57;
+  color: white;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 999px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.submit-btn:hover {
+  background: #a3685b;
+}
+
+/* Responsive */
+@media (max-width: 500px) {
+  .gregorian-script {
+    font-size: 2rem;
+  }
+
+  .date-frame-container {
+    height: 300px;
+  }
+
+  #countdown div {
+    min-width: 60px;
+    padding: 0.75rem;
+  }
+
+  .diet-options {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+.diet-options {
+  display: flex;
+  gap: 2rem;
+  margin-top: 0.5rem;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.diet-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 0.95rem;
+  color: #333;
+  text-align: center;
+}
+
+.diet-img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  margin-bottom: 6px;
+  opacity: 0.85;
+}
+
+.diet-item:hover .diet-img {
+  transform: scale(1.05);
+  opacity: 1;
+}
+
+.rsvp-icon-top {
+  width: 50px;
+  margin: 0 auto 15px;
+  display: block;
+  opacity: 0.85;
+}
+
+/* Guest Info & Upload Styles */
+.guest-info-section, .photo-share-section, .contact-assist {
   background-color: #fdf9f3;
   text-align: center;
   padding: 3rem 1.5rem;
@@ -264,10 +424,10 @@ body {
 }
 
 .info-icon {
-  width: 32px;
-  height: 32px;
-  vertical-align: middle;
-  margin-right: 10px;
+  width: 40px;
+  height: auto;
+  opacity: 0.85;
+  margin-bottom: 0.5rem;
 }
 
 .info-title {
@@ -291,26 +451,6 @@ body {
   text-decoration: underline;
 }
 
-/* Photo Share */
-.photo-share-section {
-  background-color: #fdf9f3;
-  text-align: center;
-  padding: 3rem 1.5rem;
-  border-top: 1px dashed #e0cfc2;
-}
-
-.photo-share-section .section-heading {
-  text-align: center;
-}
-
-.photo-share-section .section-heading img {
-  display: inline-block;
-  width: 36px;
-  height: 36px;
-  vertical-align: middle;
-  margin: 0 10px;
-}
-
 .upload-btn {
   background-color: #c6a77d;
   color: #fff;
@@ -327,20 +467,53 @@ body {
   background-color: #b08c62;
 }
 
-/* Contact */
+.qr-block {
+  margin-top: 1.5rem;
+}
+
+.qr-label {
+  font-size: 0.9rem;
+  color: #444;
+  margin-bottom: 0.5rem;
+}
+
+.qr-img {
+  width: 120px;
+  height: auto;
+  opacity: 0.9;
+}
+
+/* Contact section */
 .contact-assist .contact-text {
   font-size: 1rem;
   color: #333;
   margin-top: 1rem;
 }
 
-/* RSVP - preserved layout */
-.rsvp-section {
-  margin-top: 4rem;
-  padding: 2rem;
-  background: #fff9f6;
-  border-radius: 20px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+.diet-choice-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-bottom: 1.5rem;
 }
 
-/* Remaining RSVP styles preserved as-is */
+.diet-choice {
+  text-align: center;
+  cursor: pointer;
+  border: 2px solid transparent;
+  border-radius: 12px;
+  padding: 10px;
+  transition: 0.3s ease;
+}
+
+.diet-choice img {
+  width: 80px;
+  height: auto;
+  margin-bottom: 0.5rem;
+}
+
+.diet-choice.selected {
+  border-color: #5c4634;
+  background-color: #f9f5f0;
+  box-shadow: 0 0 10px rgba(92, 70, 52, 0.3);
+}
