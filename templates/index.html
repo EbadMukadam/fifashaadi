@@ -1,32 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Our Wedding Invite</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Scheherazade&family=Great+Vibes&display=swap" rel="stylesheet">
-
-  <!-- Styles -->
-  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <meta charset="UTF-8">
+    <title>Fida & Huzaifa's Wedding</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Great+Vibes&family=Scheherazade&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
   <div class="container">
 
-    <!-- Spiritual Opening -->
+    <!-- Spiritual Blessing Section -->
     <div class="spiritual">
       <p class="arabic">بِسْمِ ٱللَّٰهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ</p>
       <p class="english-trans">In the name of Allah, the Most Gracious, the Most Merciful</p>
-      <p class="verse">“And We created you in pairs”<br><span class="surah">(Qur’an 78:8)</span></p>
+      <div class="verse">
+        “And We created you in pairs”
+        <div class="surah">(Qur’an 78:8)</div>
+      </div>
     </div>
 
-    <!-- Invitation Text -->
+    <!-- Invitation Block -->
     <div class="invite-block">
       <p class="parents">Mrs. Shaista & Mr. Anwar Mukadam</p>
       <p class="request-line">Request the honour of your presence at the</p>
-      <p class="highlight-event">Wedding Ceremony</p>
-      <p class="couple-line">of their daughter</p>
+      <div class="highlight-event">Wedding Ceremony</div>
+      <p class="couple-line">of their beloved daughter</p>
       <div class="spaced-names">
         <p class="bride">Fida</p>
         <p class="with">with</p>
@@ -36,10 +35,10 @@
 
     <!-- Video Placeholder -->
     <div class="video-placeholder">
-      <p>🎥 Wedding video coming soon</p>
+      Wedding video will appear here
     </div>
 
-    <!-- Wedding Date with Floral Frame -->
+    <!-- Date with Floral Frame -->
     <div class="date-frame-container">
       <div class="date-inside-frame">
         <p class="gregorian-script">Friday, 24<sup>th</sup> October 2025</p>
@@ -50,11 +49,11 @@
     <!-- Save the Date Dropdown -->
     <div class="save-date">
       <div class="dropdown">
-        <button class="calendar-btn">📅 Save the Date</button>
+        <button class="calendar-btn">Save the Date</button>
         <div class="dropdown-content">
-          <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Fida+%26+Huzaifa+Wedding&dates=20251024T113000Z/20251024T173000Z&details=Join+us+to+celebrate+our+special+day&location=Mumbai%2C+India" target="_blank">Google Calendar</a>
           <a href="/static/fida-huzaifa-wedding.ics" download>Apple / iCal / Outlook</a>
-          <a href="https://calendar.yahoo.com/?v=60&view=d&type=20&title=Fida+%26+Huzaifa+Wedding&st=20251024T113000Z&dur=0600&desc=Join+us+for+the+wedding+celebration&in_loc=Mumbai%2C+India" target="_blank">Yahoo Calendar</a>
+          <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Fida+%26+Huzaifa's+Wedding&dates=20251024T113000Z/20251024T173000Z&details=Join+us+for+the+wedding+celebration!&location=Mumbai,India" target="_blank">Google Calendar</a>
+          <a href="#">Yahoo Calendar (coming soon)</a>
         </div>
       </div>
     </div>
@@ -62,45 +61,85 @@
     <!-- Countdown Section -->
     <div class="countdown-section">
       <p class="countdown-message">Can't wait for you to be part of this special day.<br>It's almost time!</p>
-      <div id="countdown">
-        <div><span id="days">00</span><small>Days</small></div>
-        <div><span id="hours">00</span><small>Hours</small></div>
-        <div><span id="minutes">00</span><small>Minutes</small></div>
-        <div><span id="seconds">00</span><small>Seconds</small></div>
-      </div>
+      <div id="countdown"></div>
     </div>
 
-    <!-- Buttons -->
-    <div class="buttons">
-      <a href="#rsvp" class="button">RSVP</a>
-      <a href="https://www.google.com/maps?q=Your+Wedding+Venue+Address" class="button" target="_blank">Venue</a>
-      <a href="#" class="button">Photos</a>
-    </div>
+    <!-- RSVP Section -->
+    <section class="rsvp-section" id="rsvp">
+      <img src="{{ url_for('static', filename='rsvp-icon.png') }}" alt="RSVP Icon" class="rsvp-icon">
+
+      <h2 class="rsvp-heading">RSVP</h2>
+      <p class="rsvp-subtext">
+        Please let us know if you'll be able to make it.<br>
+        Kindly RSVP by <strong>1st October</strong>.
+      </p>
+
+      <form class="rsvp-form" action="https://formspree.io/f/yourFormID" method="POST">
+        <label>Will you attend?</label>
+        <select name="attendance" required>
+          <option value="">Select an option</option>
+          <option value="Happily Accepts">Happily Accepts</option>
+          <option value="Regretfully Declines">Regretfully Declines</option>
+        </select>
+
+        <label for="name">Your Name</label>
+        <input type="text" name="name" id="name" required>
+
+        <label for="phone">Phone Number</label>
+        <input type="tel" name="phone" id="phone" required>
+
+        <label for="guests">How many guests will accompany you?</label>
+        <input type="number" name="guests" id="guests" min="0" max="5" placeholder="e.g. 2" required>
+
+        <label>Dietary Preference</label>
+        <div class="diet-options">
+          <label class="diet-item">
+            <input type="radio" name="diet" value="Vegetarian" required>
+            <img src="{{ url_for('static', filename='veg-icon.png') }}" alt="Veg Icon">
+            Vegetarian
+          </label>
+          <label class="diet-item">
+            <input type="radio" name="diet" value="Non-Vegetarian">
+            <img src="{{ url_for('static', filename='nonveg-icon.png') }}" alt="Non-Veg Icon">
+            Non-Vegetarian
+          </label>
+        </div>
+
+        <label for="message">Leave a note for the couple</label>
+        <textarea name="message" id="message" rows="4" placeholder="Optional message..."></textarea>
+
+        <button type="submit" class="submit-btn">Submit RSVP</button>
+      </form>
+    </section>
 
   </div>
 
-  <!-- Countdown Script -->
   <script>
-    const countDownDate = new Date("Oct 24, 2025 17:00:00").getTime();
+    // Countdown Timer
+    const countdown = document.getElementById('countdown');
+    const targetDate = new Date('October 24, 2025 17:00:00').getTime();
 
-    const countdownFunc = setInterval(function() {
+    const timer = setInterval(function() {
       const now = new Date().getTime();
-      const distance = countDownDate - now;
+      const distance = targetDate - now;
+
+      if (distance < 0) {
+        clearInterval(timer);
+        countdown.innerHTML = "It's time!";
+        return;
+      }
 
       const days = Math.floor(distance / (1000 * 60 * 60 * 24));
       const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
       const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
       const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-      document.getElementById("days").innerText = days;
-      document.getElementById("hours").innerText = hours;
-      document.getElementById("minutes").innerText = minutes;
-      document.getElementById("seconds").innerText = seconds;
-
-      if (distance < 0) {
-        clearInterval(countdownFunc);
-        document.getElementById("countdown").innerHTML = "We're married!";
-      }
+      countdown.innerHTML = `
+        <div><span>${days}</span><small>Days</small></div>
+        <div><span>${hours}</span><small>Hours</small></div>
+        <div><span>${minutes}</span><small>Minutes</small></div>
+        <div><span>${seconds}</span><small>Seconds</small></div>
+      `;
     }, 1000);
   </script>
 </body>

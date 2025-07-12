@@ -1,296 +1,290 @@
+/* General */
 body {
+  font-family: 'Playfair Display', serif;
+  background: #fdf8f5;
+  color: #333;
   margin: 0;
-  font-family: 'Segoe UI', sans-serif;
-  background: #fef9f4;
-  color: #444;
-  text-align: center;
-  padding: 2rem;
+  padding: 0;
 }
 
 .container {
-  max-width: 600px;
-  margin: auto;
+  max-width: 800px;
+  margin: 0 auto;
   padding: 2rem;
-  background: white;
-  border-radius: 20px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  text-align: center;
 }
 
-/* Spiritual Section */
+/* Spiritual Intro */
 .spiritual {
-  margin-top: 2rem;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
 }
-
 .arabic {
-  font-size: 2rem;
   font-family: 'Scheherazade', serif;
-  color: #5a3e36;
-  direction: rtl;
-  margin-bottom: 0.5rem;
+  font-size: 2rem;
+  color: #764134;
 }
-
 .english-trans {
-  font-size: 1.1rem;
-  color: #444;
   font-style: italic;
-  margin-bottom: 1rem;
+  font-size: 1rem;
+  margin-top: 0.5rem;
 }
-
 .verse {
-  font-family: 'Playfair Display', serif;
-  font-size: 1.3rem;
-  color: #5a3e36;
+  margin-top: 1rem;
+  font-style: italic;
 }
-
 .surah {
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   color: #777;
 }
 
 /* Invitation Block */
 .invite-block {
-  text-align: center;
-  margin: 3rem 0;
-  color: #333;
+  margin-top: 2rem;
 }
-
 .parents {
-  font-size: 1.2rem;
-  font-style: italic;
-  color: #444;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
 }
-
 .request-line {
+  margin-bottom: 1rem;
   font-size: 1.1rem;
-  margin-top: 0.5rem;
-  letter-spacing: 0.5px;
 }
-
 .highlight-event {
+  font-size: 2rem;
   font-family: 'Great Vibes', cursive;
-  font-size: 2.5rem;
   color: #b77b57;
-  margin: 1rem 0;
-}
-
-.couple-line {
-  font-size: 1.2rem;
   margin-bottom: 1rem;
 }
-
-.spaced-names p {
-  margin: 0.5rem 0;
+.couple-line {
+  margin-bottom: 0.5rem;
 }
-
-.bride,
-.groom {
+.spaced-names {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+.bride, .groom {
   font-family: 'Great Vibes', cursive;
-  font-size: 2.2rem;
+  font-size: 2rem;
   color: #b77b57;
 }
-
 .with {
-  font-size: 1.1rem;
   font-style: italic;
-  color: #777;
 }
 
 /* Video Placeholder */
 .video-placeholder {
-  background: #eee;
-  border: 2px dashed #ccc;
-  padding: 4rem;
   margin: 2rem 0;
-  font-size: 1.2rem;
-  border-radius: 10px;
-  text-align: center;
-}
-
-/* Wedding Date with Floral Frame */
-.date-frame-container {
-  background: url("../static/floral-date-frame.png") no-repeat center center;
-  background-size: contain;
-  width: 100%;
-  max-width: 450px;
-  height: 340px;
-  margin: 3rem auto;
+  height: 200px;
+  background: #eee;
   display: flex;
   align-items: center;
   justify-content: center;
-  text-align: center;
-}
-
-.date-inside-frame {
-  background-color: rgba(255, 255, 255, 0.85);
-  padding: 1rem;
-  border-radius: 10px;
-}
-
-.gregorian-script {
-  font-family: 'Great Vibes', cursive;
-  font-size: 2.3rem;
-  color: #5a3e36;
-  margin: 0;
-  white-space: nowrap;
-}
-
-.islamic-light {
-  font-size: 0.95rem;
+  border-radius: 8px;
+  color: #888;
   font-style: italic;
-  color: #777;
-  margin-top: 0.3rem;
 }
 
-/* Save the Date Dropdown Styling */
-.save-date {
+/* Date with Frame */
+.date-frame-container {
+  background: url("../static/date-frame.png") no-repeat center;
+  background-size: contain;
+  height: 300px;
   display: flex;
+  align-items: center;
   justify-content: center;
-  margin-top: -1.5rem;
   margin-bottom: 2rem;
 }
+.date-inside-frame {
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 1rem 2rem;
+  border-radius: 12px;
+}
+.gregorian-script {
+  font-family: 'Great Vibes', cursive;
+  font-size: 1.8rem;
+  color: #4a2e2e;
+}
+.islamic-light {
+  font-style: italic;
+  font-size: 0.95rem;
+  color: #666;
+  margin-top: 0.25rem;
+}
 
+/* Save the Date Dropdown */
+.save-date {
+  margin-bottom: 2rem;
+}
 .calendar-btn {
-  font-family: 'Playfair Display', serif;
-  font-size: 1.1rem;
-  padding: 0.75rem 1.5rem;
-  background: linear-gradient(to right, #eecda3, #ef629f);
-  border: none;
-  border-radius: 50px;
+  background: #a3685b;
   color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 999px;
+  font-family: 'Playfair Display';
+  font-size: 1rem;
   cursor: pointer;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-  transition: all 0.3s ease;
 }
-
-.calendar-btn:hover {
-  transform: scale(1.05);
-  background: linear-gradient(to right, #d5a3ee, #a362ef);
-}
-
 .dropdown {
   position: relative;
   display: inline-block;
 }
-
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: white;
-  min-width: 180px;
-  box-shadow: 0px 8px 16px rgba(0,0,0,0.1);
-  border-radius: 10px;
+  background-color: #f9f9f9;
+  min-width: 200px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  border-radius: 12px;
   z-index: 1;
-  text-align: left;
-  padding: 0.5rem 0;
-  top: 110%;
+  padding: 0.5rem;
 }
-
 .dropdown-content a {
-  color: #5a3e36;
-  padding: 10px 16px;
+  color: #333;
+  padding: 0.5rem;
   text-decoration: none;
   display: block;
-  font-family: 'Segoe UI', sans-serif;
   font-size: 0.95rem;
 }
-
-.dropdown-content a:hover {
-  background-color: #f9f1eb;
-  color: #b77b57;
-}
-
 .dropdown:hover .dropdown-content {
   display: block;
 }
 
-/* Countdown Timer */
+/* Countdown */
 .countdown-section {
-  margin-top: 2rem;
-  text-align: center;
+  margin-bottom: 2rem;
 }
-
-.countdown-message {
-  font-size: 1.2rem;
-  font-style: italic;
-  margin-bottom: 1rem;
-  color: #5a3e36;
-}
-
 #countdown {
   display: flex;
   justify-content: center;
-  gap: 1.5rem;
-  font-family: 'Playfair Display', serif;
+  gap: 1rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
 }
-
 #countdown div {
-  text-align: center;
-  background: #fceee9;
+  background: #fff;
   padding: 1rem;
-  border-radius: 10px;
-  min-width: 60px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+  min-width: 80px;
 }
-
 #countdown span {
   display: block;
-  font-size: 1.8rem;
-  color: #b77b57;
+  font-size: 1.5rem;
+  font-weight: bold;
 }
-
 #countdown small {
   font-size: 0.8rem;
+  color: #777;
+}
+.countdown-message {
+  font-style: italic;
+  color: #555;
+  margin-bottom: 0.5rem;
+}
+
+/* RSVP Section */
+.rsvp-section {
+  margin-top: 4rem;
+  padding: 2rem;
+  background: #fff9f6;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+.rsvp-icon {
+  width: 60px;
+  margin-bottom: 1rem;
+}
+.rsvp-heading {
+  font-size: 2rem;
+  font-family: 'Playfair Display', serif;
+  color: #b77b57;
+  margin-bottom: 0.5rem;
+}
+.rsvp-subtext {
+  font-size: 1rem;
+  margin-bottom: 2rem;
   color: #555;
 }
-
-/* Buttons */
-.buttons {
+.rsvp-form {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   gap: 1rem;
-  justify-content: center;
-  margin-top: 2rem;
+  max-width: 500px;
+  margin: 0 auto;
+  text-align: left;
 }
-
-.button {
-  background: #b97c6d;
+.rsvp-form input,
+.rsvp-form select,
+.rsvp-form textarea {
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  width: 100%;
+}
+.rsvp-form input[type="number"] {
+  width: 100%;
+}
+.rsvp-form label {
+  font-weight: bold;
+  font-size: 0.95rem;
+  color: #333;
+}
+.diet-options {
+  display: flex;
+  gap: 2rem;
+  margin-top: 0.5rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.diet-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 0.95rem;
+  color: #333;
+}
+.diet-item img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  opacity: 0.7;
+  margin-bottom: 0.25rem;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+.diet-item:hover img {
+  opacity: 1;
+  transform: scale(1.1);
+}
+.submit-btn {
+  background: #b77b57;
   color: white;
-  padding: 0.75rem 1.5rem;
+  padding: 0.75rem;
+  border: none;
   border-radius: 999px;
-  text-decoration: none;
+  font-size: 1rem;
+  cursor: pointer;
   transition: background 0.3s ease;
 }
-
-.button:hover {
+.submit-btn:hover {
   background: #a3685b;
 }
 
-/* Mobile Optimizations */
-@media (max-width: 500px) {
+@media screen and (max-width: 600px) {
+  .highlight-event {
+    font-size: 1.6rem;
+  }
   .gregorian-script {
-    font-size: 2rem;
-  }
-
-  .date-frame-container {
-    height: 300px;
-  }
-
-  #countdown {
-    flex-wrap: wrap;
-    gap: 1rem;
-  }
-
-  #countdown div {
-    min-width: 70px;
-    padding: 0.75rem;
-  }
-
-  #countdown span {
     font-size: 1.4rem;
   }
-
-  .calendar-btn {
-    font-size: 1rem;
-    padding: 0.6rem 1.2rem;
+  #countdown {
+    flex-direction: column;
+    align-items: center;
+  }
+  .rsvp-form {
+    padding: 0 1rem;
   }
 }
