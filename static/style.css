@@ -483,12 +483,23 @@ body {
   opacity: 0.9;
 }
 
-/* Contact section */
-.contact-assist .contact-text {
-  font-size: 1rem;
-  color: #333;
-  margin-top: 1rem;
+.contact-assist {
+  text-align: center;
+  margin: 40px 0;
 }
+
+.contact-text {
+  font-size: 1.1rem;
+  color: #443322;
+  margin-bottom: 10px;
+}
+
+.contact-assist .info-icon {
+  width: 40px;
+  height: auto;
+  margin-top: 10px;
+}
+
 
 .diet-choice-wrapper {
   display: flex;

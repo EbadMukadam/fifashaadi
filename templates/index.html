@@ -110,11 +110,13 @@
 
     <!-- Contact Assistance Section -->
     <section class="contact-assist">
-      <img src="{{ url_for('static', filename='whatsapp.png') }}" alt="WhatsApp Icon" class="info-icon">
       <p class="contact-text">
         For assistance with accommodation and transport,<br>
-        please WhatsApp <strong>Ebad Mukadam</strong> at <a class="whatsapp-link" href="https://wa.me/917875531786" target="_blank">+91 78755 31786</a>
+        contact <strong>Ebad Mukadam</strong>
       </p>
+      <a href="https://wa.me/917875531786" target="_blank">
+        <img src="{{ url_for('static', filename='whatsapp.png') }}" alt="WhatsApp Icon" class="info-icon">
+      </a>
     </section>
 
     <!-- RSVP Section -->
@@ -143,17 +145,7 @@
         <input type="number" name="guests" id="guests" min="0" max="5" required>
 
         <label>Dietary Preference</label>
-        <div class="diet-options">
-          <label class="diet-item">
-            <input type="radio" name="diet" value="Vegetarian" required>
-            <div class="diet-icon veg"></div>
-            Vegetarian
-          </label>
-          <label class="diet-item">
-            <input type="radio" name="diet" value="Non-Vegetarian">
-            <div class="diet-icon nonveg"></div>
-            Non-Vegetarian
-          </label>
+        
         <div class="diet-choice-wrapper">
           <div class="diet-choice" data-value="Vegetarian">
             <img src="{{ url_for('static', filename='veg.png') }}" alt="Vegetarian">
