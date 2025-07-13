@@ -20,8 +20,23 @@
     </div>
 
 
-    <!-- Video placeholder -->
-    <div class="video-placeholder">[ Wedding Video Coming Soon ]</div>
+    <!-- Video Section -->
+    <div class="video-container">
+      <video id="weddingVideo" preload="metadata" poster="{{ url_for('static', filename='video-thumbnail.jpg') }}">
+        <source src="{{ url_for('static', filename='marigold-video.mp4') }}" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <div class="video-overlay" onclick="playVideoFullScreen()">
+    ▶️
+    </div>
+    </div>
+
+    <!-- Scroll to RSVP -->
+    <div class="scroll-to-rsvp">
+      <button onclick="document.getElementById('rsvp').scrollIntoView({ behavior: 'smooth' })">
+        RSVP Now
+      </button>
+    </div>
 
     <!-- Date Block -->
     <div class="date-frame-container">
@@ -192,6 +207,19 @@
         hiddenInput.value = choice.dataset.value;
       });
     });
+  </script>
+  <script>
+    function playVideoFullScreen() {
+      const video = document.getElementById('weddingVideo');
+      if (video.requestFullscreen) {
+        video.requestFullscreen();
+      } else if (video.webkitRequestFullscreen) {
+        video.webkitRequestFullscreen();
+      } else if (video.msRequestFullscreen) {
+        video.msRequestFullscreen();
+      }
+      video.play();
+    }
   </script>
 </body>
 </html>
