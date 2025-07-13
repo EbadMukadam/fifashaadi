@@ -598,3 +598,33 @@ body {
 .scroll-to-rsvp button:hover {
   background-color: #6f472b;
 }
+
+.video-wrapper {
+  position: relative;
+  max-width: 100%;
+  margin: 40px auto;
+  text-align: center;
+}
+
+.video-wrapper video {
+  width: 100%;
+  max-height: 480px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.custom-play-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  z-index: 2;
+}
+
+.custom-play-button img {
+  width: 80px;
+  opacity: 0.5; /* Adjust as needed */
+  filter: drop-shadow(0 0 4px #b77b57); /* Optional glow */
+}
+

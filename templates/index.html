@@ -21,14 +21,14 @@
 
 
     <!-- Video Section -->
-    <div class="video-container">
-      <video id="weddingVideo" preload="metadata" poster="{{ url_for('static', filename='video-thumbnail.jpg') }}">
+    <div class="video-wrapper">
+      <video id="weddingVideo" poster="{{ url_for('static', filename='video-thumbnail.jpg') }}">
         <source src="{{ url_for('static', filename='marigold-video.mp4') }}" type="video/mp4">
         Your browser does not support the video tag.
-    </video>
-    <div class="video-overlay" onclick="playVideoFullScreen()">
-    ▶️
-    </div>
+      </video>
+      <div class="custom-play-button" onclick="playVideo()">
+        <img src="{{ url_for('static', filename='transparent-play.png') }}" alt="Play">
+      </div>
     </div>
 
     <!-- Scroll to RSVP -->
@@ -209,8 +209,10 @@
     });
   </script>
   <script>
-    function playVideoFullScreen() {
-      const video = document.getElementById('weddingVideo');
+    function playVideo() {
+      const video = document.getElementById('wedding-video');
+      const playBtn = document.querySelector('.custom-play-button');
+
       if (video.requestFullscreen) {
         video.requestFullscreen();
       } else if (video.webkitRequestFullscreen) {
@@ -218,6 +220,8 @@
       } else if (video.msRequestFullscreen) {
         video.msRequestFullscreen();
       }
+
+      playBtn.style.display = 'none';
       video.play();
     }
   </script>
