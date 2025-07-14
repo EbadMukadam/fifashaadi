@@ -272,6 +272,7 @@ body {
   max-width: 450px;
   margin: 0 auto;
   text-align: left;
+  padding: 0 1rem;  /* balanced left-right padding */
 }
 
 .rsvp-form input,
